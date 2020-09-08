@@ -975,3 +975,93 @@ Completed 200 OK in 84ms (Views: 80.7ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mCoin Create (53.7ms)[0m  [1m[32mINSERT INTO "coins" ("acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["acronym", "Dash"], ["url_image", "data:image/png;base64,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"], ["created_at", "2020-09-08 17:50:24.499376"], ["updated_at", "2020-09-08 17:50:24.499376"]]
   [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/welcome/index" for 127.0.0.1 at 2020-09-08 14:51:13 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 410ms (Views: 399.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-08 14:51:16 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 104ms (Views: 94.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/coins/4/edit" for 127.0.0.1 at 2020-09-08 14:51:21 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (35.1ms)
+  Rendered coins/edit.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 115ms (Views: 99.9ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/coins/4" for 127.0.0.1 at 2020-09-08 14:51:25 -0300
+Processing by CoinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7DPbr6T9gwsRfIaE0Q64hHzA9ePO0BWLybuJg1MX0aOw+TAZnagGE35wJY9ISikULr5ZjwCAXRN8Wblnv3uCqA==", "coin"=>{"description"=>"Dash", "acronym"=>"Dash", "url_image"=>"data:image/png;base64,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"}, "commit"=>"Update Coin", "id"=>"4"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[36mCoin Update (1.5ms)[0m  [1m[33mUPDATE "coins" SET "description" = ?, "updated_at" = ? WHERE "coins"."id" = ?[0m  [["description", "Dash"], ["updated_at", "2020-09-08 17:51:25.980383"], ["id", 4]]
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+Redirected to http://localhost:3000/coins/4
+Completed 302 Found in 18ms (ActiveRecord: 6.0ms)
+
+
+Started GET "/coins/4" for 127.0.0.1 at 2020-09-08 14:51:26 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 56.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/4/edit" for 127.0.0.1 at 2020-09-08 14:51:30 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (2.8ms)
+  Rendered coins/edit.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 94ms (Views: 86.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/coins/4" for 127.0.0.1 at 2020-09-08 14:51:51 -0300
+Processing by CoinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NEGK+4Yks3h0nyxrFqvVSeJ2B+vYZNmRuhBVU2jIaI1oi2FNv3E2YBuTj2CP70TZsAirhxY0kQkP8mW3hKQ7hg==", "coin"=>{"description"=>"Dash", "acronym"=>"Dash", "url_image"=>"https://lh3.googleusercontent.com/proxy/pne_NuO5Qi-ymD0wmFNbvQZxDunRxKOBiQ5_tiEkl5TgQ9KV6MJHpEpHF8RkHHnxKcSji6OGHXdzFdmW5SFqMBxi"}, "commit"=>"Update Coin", "id"=>"4"}
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[36mCoin Update (0.9ms)[0m  [1m[33mUPDATE "coins" SET "url_image" = ?, "updated_at" = ? WHERE "coins"."id" = ?[0m  [["url_image", "https://lh3.googleusercontent.com/proxy/pne_NuO5Qi-ymD0wmFNbvQZxDunRxKOBiQ5_tiEkl5TgQ9KV6MJHpEpHF8RkHHnxKcSji6OGHXdzFdmW5SFqMBxi"], ["updated_at", "2020-09-08 17:51:51.311366"], ["id", 4]]
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+Redirected to http://localhost:3000/coins/4
+Completed 302 Found in 18ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/coins/4" for 127.0.0.1 at 2020-09-08 14:51:51 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 79ms (Views: 72.6ms | ActiveRecord: 0.4ms)
+
+
