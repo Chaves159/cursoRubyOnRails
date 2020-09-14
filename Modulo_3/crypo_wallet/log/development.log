@@ -1505,3 +1505,259 @@ Completed 200 OK in 427ms (Views: 409.0ms | ActiveRecord: 2.5ms)
   ↳ bin/rails:4
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
   ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCoin Create (0.7ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://img2.gratispng.com/20180517/rbq/kisspng-bitcoin-cryptocurrency-exchange-digital-currency-t-5afdf7b0771a30.4144674615265934564879.jpg"], ["created_at", "2020-09-14 18:04:57.111701"], ["updated_at", "2020-09-14 18:04:57.111701"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCoin Create (0.7ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"], ["created_at", "2020-09-14 18:04:57.116423"], ["updated_at", "2020-09-14 18:04:57.116423"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:8
+  [1m[36mCoin Create (1.7ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg"], ["created_at", "2020-09-14 18:04:57.124035"], ["updated_at", "2020-09-14 18:04:57.124035"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:8
+Started GET "/" for ::1 at 2020-09-14 15:05:14 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.3ms)
+  Rendered welcome/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 248ms (Views: 243.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coin" for ::1 at 2020-09-14 15:05:27 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/coin"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/coins" for ::1 at 2020-09-14 15:05:42 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 52ms (Views: 44.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-14 15:08:39 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 245ms (Views: 236.4ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCoin Load (1.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://img2.gratispng.com/20180517/rbq/kisspng-bitcoin-cryptocurrency-exchange-digital-currency-t-5afdf7b0771a30.4144674615265934564879.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+Started GET "/coins" for ::1 at 2020-09-14 15:14:11 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 257ms (Views: 247.6ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/coins/2" for ::1 at 2020-09-14 15:14:18 -0300
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"iBCd8un3SNGhnFyLiJ/mEKVt3kqkne5ZIVTkiFaU3bwkJL/ylLnBq8yFwacldRSqz1zradmu1TP61fZaHgWOcw==", "id"=>"2"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:57
+  [1m[36mCoin Destroy (2.6ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/coins_controller.rb:57
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:57
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 13ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-14 15:14:18 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/coins/4" for ::1 at 2020-09-14 15:14:23 -0300
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"w+GcmTWvVC00uqQcJ2MBOkQcqDYsAU2HnC8KEWBBwe1v1b6ZSOHdV1mjOTCKifOALi2dFVEydu1HrhjDKNCSIg==", "id"=>"4"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:57
+  [1m[36mCoin Destroy (0.6ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/coins_controller.rb:57
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:57
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 7ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-14 15:14:23 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 38ms (Views: 35.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/coins/6" for ::1 at 2020-09-14 15:14:27 -0300
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yd3ImCejgs9VFKaIKTAn0vRCftfPJ28xsZ9g2kKHn5ll6eqYWu0LtTgNO6SE2tVonnNL9LIUVFtqHnIIChbMVg==", "id"=>"6"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:57
+  [1m[36mCoin Destroy (0.6ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/coins_controller.rb:57
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:57
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 6ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-14 15:14:27 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 36.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://img2.gratispng.com/20180517/rbq/kisspng-bitcoin-cryptocurrency-exchange-digital-currency-t-5afdf7b0771a30.4144674615265934564879.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://img2.gratispng.com/20180517/rbq/kisspng-bitcoin-cryptocurrency-exchange-digital-currency-t-5afdf7b0771a30.4144674615265934564879.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+Started DELETE "/coins/3" for ::1 at 2020-09-14 15:15:32 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"2v5Eb7m4MLhvhaxxrrXMy353S5q2h2gGg9cwO4jUmNx2ymZvxPa5wgKcMV0DXz5xFEZ+ucu0U2xYViLpwEXLEw==", "id"=>"3"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:57
+  [1m[36mCoin Destroy (9.6ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/coins_controller.rb:57
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:57
+Redirected to http://localhost:3000/coins
+Completed 302 Found in 32ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-14 15:15:32 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 236ms (Views: 233.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-14 15:15:36 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://img2.gratispng.com/20180517/rbq/kisspng-bitcoin-cryptocurrency-exchange-digital-currency-t-5afdf7b0771a30.4144674615265934564879.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mCoin Create (8.0ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg"], ["created_at", "2020-09-14 18:15:56.999726"], ["updated_at", "2020-09-14 18:15:56.999726"]]
+  ↳ db/seeds.rb:27
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+Started GET "/coins" for ::1 at 2020-09-14 15:16:07 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 244ms (Views: 234.6ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://img2.gratispng.com/20180517/rbq/kisspng-bitcoin-cryptocurrency-exchange-digital-currency-t-5afdf7b0771a30.4144674615265934564879.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
+  [1m[36mCoin Load (0.1ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."description" = ? AND "coins"."acronym" = ? AND "coins"."url_image" = ? LIMIT ?[0m  [["description", "Dash"], ["acronym", "DASH"], ["url_image", "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:29
