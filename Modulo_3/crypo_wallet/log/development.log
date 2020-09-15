@@ -1929,3 +1929,165 @@ Migrating to CreateMiningTypes (20200915162321)
   ↳ bin/rails:4
   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
+Started GET "/" for ::1 at 2020-09-15 13:26:41 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.5ms)
+  Rendered welcome/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 1481ms (Views: 1442.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-15 13:26:53 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.8ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 309ms (Views: 228.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/mining_types/new" for ::1 at 2020-09-15 13:26:59 -0300
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (166.8ms)
+  Rendered mining_types/new.html.erb within layouts/application (177.6ms)
+Completed 200 OK in 411ms (Views: 381.2ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/mining_types" for ::1 at 2020-09-15 13:27:22 -0300
+Processing by MiningTypesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HCk4XpCkfxXwadbkJBGpfYWdQ3qfRqDJDk+LQzTemXlu1iejSEIqUtb8vCfC7LGWx6CJ2jZ07yiW4kDtUy8v5g==", "mining_type"=>{"description"=>"Proof of Work", "acronym"=>"PoW"}, "commit"=>"Create Mining type"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[36mMiningType Create (2.3ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of Work"], ["acronym", "PoW"], ["created_at", "2020-09-15 16:27:22.562493"], ["updated_at", "2020-09-15 16:27:22.562493"]]
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+Redirected to http://localhost:3000/mining_types/1
+Completed 302 Found in 32ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/mining_types/1" for ::1 at 2020-09-15 13:27:22 -0300
+Processing by MiningTypesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiningType Load (0.8ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mining_types_controller.rb:67
+  Rendering mining_types/show.html.erb within layouts/application
+  Rendered mining_types/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 249ms (Views: 211.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-15 13:27:26 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.9ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 198ms (Views: 187.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/mining_types/new" for ::1 at 2020-09-15 13:28:08 -0300
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (6.3ms)
+  Rendered mining_types/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 273ms (Views: 262.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mining_types" for ::1 at 2020-09-15 13:28:30 -0300
+Processing by MiningTypesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gGQHTzDOPWbglPttDXQNnLHVX7IpSMjgSn+9ZTHwA3vymxiy6ChoIcYBka7riRV38+iVEoB6hwHS0nbLVgG15A==", "mining_type"=>{"description"=>"Proof of Stake", "acronym"=>"PoS"}, "commit"=>"Create Mining type"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[36mMiningType Create (53.3ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of Stake"], ["acronym", "PoS"], ["created_at", "2020-09-15 16:28:30.953350"], ["updated_at", "2020-09-15 16:28:30.953350"]]
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+Redirected to http://localhost:3000/mining_types/2
+Completed 302 Found in 83ms (ActiveRecord: 59.9ms)
+
+
+Started GET "/mining_types/2" for ::1 at 2020-09-15 13:28:31 -0300
+Processing by MiningTypesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMiningType Load (0.7ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mining_types_controller.rb:67
+  Rendering mining_types/show.html.erb within layouts/application
+  Rendered mining_types/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 216ms (Views: 198.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-15 13:28:36 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 185ms (Views: 168.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/mining_types/new" for ::1 at 2020-09-15 13:28:38 -0300
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (5.7ms)
+  Rendered mining_types/new.html.erb within layouts/application (27.7ms)
+Completed 200 OK in 251ms (Views: 239.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mining_types" for ::1 at 2020-09-15 13:28:53 -0300
+Processing by MiningTypesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r/kWRUPgHGO2+ivkkXcagWty3fwkQLbHLJS2G2PmOdDdBgm4mwZJJJBvQSd3igJqKU8XXI1y+Sa0OX21BBePTw==", "mining_type"=>{"description"=>"Proof of  Capacity", "acronym"=>"PoC"}, "commit"=>"Create Mining type"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[36mMiningType Create (54.6ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of  Capacity"], ["acronym", "PoC"], ["created_at", "2020-09-15 16:28:53.843755"], ["updated_at", "2020-09-15 16:28:53.843755"]]
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+Redirected to http://localhost:3000/mining_types/3
+Completed 302 Found in 84ms (ActiveRecord: 61.0ms)
+
+
+Started GET "/mining_types/3" for ::1 at 2020-09-15 13:28:53 -0300
+Processing by MiningTypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMiningType Load (0.4ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mining_types_controller.rb:67
+  Rendering mining_types/show.html.erb within layouts/application
+  Rendered mining_types/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 145ms (Views: 133.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-15 13:28:58 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.9ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 217ms (Views: 204.4ms | ActiveRecord: 0.9ms)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to AddMiningTypeToCoins (20200915163823)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (53.9ms)[0m  [1m[35mALTER TABLE "coins" ADD "mining_type_id" integer[0m
+  ↳ db/migrate/20200915163823_add_mining_type_to_coins.rb:3
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200915163823_add_mining_type_to_coins.rb:3
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE  INDEX "index_coins_on_mining_type_id" ON "coins" ("mining_type_id")[0m
+  ↳ db/migrate/20200915163823_add_mining_type_to_coins.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200915163823"]]
+  ↳ bin/rails:4
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
