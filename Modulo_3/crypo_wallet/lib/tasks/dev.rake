@@ -8,8 +8,8 @@ namespace :dev do
 
         show_spinner("Semeando db") {%x(db:seed)}
 
-        %x(rails dev:add_coins)
         %x(rails dev:add_mining_types)
+        %x(rails dev:add_coins)
       else
         puts "Você não esta em ambiente de desenvolvimento!!"
       end
@@ -23,17 +23,20 @@ namespace :dev do
             {
                 description: "Bitcoin",
                 acronym: "BTC",
-                url_image: "https://img2.gratispng.com/20180517/rbq/kisspng-bitcoin-cryptocurrency-exchange-digital-currency-t-5afdf7b0771a30.4144674615265934564879.jpg"
+                url_image: "https://img2.gratispng.com/20180517/rbq/kisspng-bitcoin-cryptocurrency-exchange-digital-currency-t-5afdf7b0771a30.4144674615265934564879.jpg",
+                mining_type: MiningType.find_by(acronym: 'PoW')
             },
             {
                 description: "Ethereum",
                 acronym: "ETH",
-                url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png"
+                url_image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/471px-Ethereum_logo_2014.svg.png",
+                mining_type: MiningType.find_by(acronym: 'PoS')
             },
             {
                 description: "Dash",
                 acronym: "DASH",
-                url_image: "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg"
+                url_image: "https://image.shutterstock.com/image-illustration/raster-illustration-dash-crypto-currency-260nw-1009072462.jpg",
+                mining_type: MiningType.find_by(acronym: 'PoC')
             }
         ]
     coins.each do |coin|
