@@ -2957,3 +2957,132 @@ Processing by CoinsController#index as HTML
 Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/coins" for ::1 at 2020-09-17 14:07:23 -0300
+  
+SyntaxError (C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/app/controllers/coins_controller.rb:3: syntax error, unexpected [, expecting do or '{' or '('
+...set_mining_type_options, only [:new, :create, :edit, :update]
+...                              ^):
+  
+app/controllers/coins_controller.rb:3: syntax error, unexpected [, expecting do or '{' or '('
+Started GET "/coins" for ::1 at 2020-09-17 14:08:08 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 94ms (Views: 84.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/coins/1/edit" for ::1 at 2020-09-17 14:08:46 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "mining_types"."description", "mining_types"."id" FROM "mining_types"[0m
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (3.2ms)
+  Rendered coins/edit.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 56ms (Views: 45.2ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/coins/1" for ::1 at 2020-09-17 14:08:49 -0300
+Processing by CoinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9i2edSWVfeCGilPWoSrelQCqiPGecddbYw7Tlu97NnoKxDQjyfJqLW2Q3Ao2NfPNYEJdAliKAdJ70p/zpl3bxA==", "coin"=>{"description"=>"Bitcoin", "acronym"=>"BTC", "url_image"=>"https://img1.gratispng.com/20180330/eje/kisspng-bitcoin-cryptocurrency-monero-initial-coin-offerin-bitcoin-5abdfe6b6c5365.2052061515224008754437.jpg", "mining_type_id"=>"1"}, "commit"=>"Update Coin", "id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "mining_types"."description", "mining_types"."id" FROM "mining_types"[0m
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[36mMiningType Load (0.1ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[36mCoin Update (0.7ms)[0m  [1m[33mUPDATE "coins" SET "mining_type_id" = ?, "updated_at" = ? WHERE "coins"."id" = ?[0m  [["mining_type_id", 1], ["updated_at", "2020-09-17 17:08:49.896608"], ["id", 1]]
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+Redirected to http://localhost:3000/coins/1
+Completed 302 Found in 17ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-17 14:08:49 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 14:08:52 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 56ms (Views: 53.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins/1/edit" for ::1 at 2020-09-17 14:08:53 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "mining_types"."description", "mining_types"."id" FROM "mining_types"[0m
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (1.7ms)
+  Rendered coins/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 45ms (Views: 40.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/coins/1" for ::1 at 2020-09-17 14:08:58 -0300
+Processing by CoinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v68AH79LnBRBgUjWJywNITDf8O590TPjD4LStpm/XMNDRqpJUyyL2aqbxwqwMyB5UDclHbsq5WoXXp7T0JmxfQ==", "coin"=>{"description"=>"Bitcoin", "acronym"=>"BTC", "url_image"=>"https://img1.gratispng.com/20180330/eje/kisspng-bitcoin-cryptocurrency-monero-initial-coin-offerin-bitcoin-5abdfe6b6c5365.2052061515224008754437.jpg", "mining_type_id"=>"3"}, "commit"=>"Update Coin", "id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "mining_types"."description", "mining_types"."id" FROM "mining_types"[0m
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[36mCoin Update (0.8ms)[0m  [1m[33mUPDATE "coins" SET "mining_type_id" = ?, "updated_at" = ? WHERE "coins"."id" = ?[0m  [["mining_type_id", 3], ["updated_at", "2020-09-17 17:08:58.113282"], ["id", 1]]
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+Redirected to http://localhost:3000/coins/1
+Completed 302 Found in 13ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-17 14:08:58 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 51ms (Views: 47.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2020-09-17 14:24:59 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.9ms)
+  Rendered welcome/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 261ms (Views: 255.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-17 14:43:43 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 274ms (Views: 267.9ms | ActiveRecord: 0.0ms)
+
+
