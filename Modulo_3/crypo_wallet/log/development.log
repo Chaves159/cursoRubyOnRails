@@ -3086,3 +3086,72 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 274ms (Views: 267.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2020-09-17 14:47:22 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 237ms (Views: 232.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-17 14:49:03 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.3ms)
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-17 14:54:42 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (957.9ms)
+Completed 200 OK in 1004ms (Views: 1001.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-17 14:56:59 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (946.9ms)
+Completed 200 OK in 984ms (Views: 981.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-17 14:58:17 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (958.1ms)
+Completed 200 OK in 1171ms (Views: 1166.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-17 15:00:47 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-17 15:11:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (909.6ms)
+Completed 200 OK in 948ms (Views: 945.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-17 15:11:25 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.3ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 61ms (Views: 47.0ms | ActiveRecord: 1.1ms)
+
+
