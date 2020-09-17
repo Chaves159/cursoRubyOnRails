@@ -2239,3 +2239,385 @@ Completed 200 OK in 292ms (Views: 226.3ms | ActiveRecord: 5.2ms)
   ↳ bin/rails:4
   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
+Started GET "/" for ::1 at 2020-09-17 07:21:05 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.1ms)
+  Rendered welcome/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 1211ms (Views: 1174.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-17 07:21:12 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 264ms (Views: 166.0ms | ActiveRecord: 3.0ms)
+
+
+  [1m[36mCoin Load (15.5ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  [1m[36mCoin Load (12.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+Started GET "/coins" for ::1 at 2020-09-17 07:35:51 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.9ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 933ms (Views: 800.7ms | ActiveRecord: 3.7ms)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/coins" for ::1 at 2020-09-17 07:37:34 -0300
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.0ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 1232ms (Views: 1154.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 08:13:32 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.9ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 266ms (Views: 252.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 08:13:35 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (262.1ms)
+  Rendered coins/new.html.erb within layouts/application (273.5ms)
+Completed 500 Internal Server Error in 388ms (ActiveRecord: 53.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `description' for nil:NilClass):
+    27:   </div>
+    28: 
+    29:   <div class="field">
+    30:     <%=coin.mining_type.description %>
+    31:   </div>
+    32: 
+    33:   <div class="actions">
+  
+app/views/coins/_form.html.erb:30:in `block in _app_views_coins__form_html_erb__982528462_118350620'
+app/views/coins/_form.html.erb:1:in `_app_views_coins__form_html_erb__982528462_118350620'
+app/views/coins/new.html.erb:3:in `_app_views_coins_new_html_erb__367811806_117922000'
+Started GET "/coins/new" for ::1 at 2020-09-17 08:14:25 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  Rendered coins/_form.html.erb (22.1ms)
+  Rendered coins/new.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `mining_type' for #<Class:0x000000000b988c98>):
+    27:   </div>
+    28: 
+    29:   <div class="field">
+    30:     <%=Coin.mining_type.description %>
+    31:   </div>
+    32: 
+    33:   <div class="actions">
+  
+app/views/coins/_form.html.erb:30:in `block in _app_views_coins__form_html_erb__982528462_76572900'
+app/views/coins/_form.html.erb:1:in `_app_views_coins__form_html_erb__982528462_76572900'
+app/views/coins/new.html.erb:3:in `_app_views_coins_new_html_erb__367811806_76562000'
+Started GET "/" for ::1 at 2020-09-17 08:23:59 -0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.8ms)
+  Rendered welcome/index.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 988ms (Views: 962.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 08:24:07 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.0ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 288ms (Views: 214.9ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 08:24:10 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (52.4ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:30
+  Rendered coins/_form.html.erb (243.4ms)
+  Rendered coins/new.html.erb within layouts/application (253.1ms)
+Completed 200 OK in 481ms (Views: 388.1ms | ActiveRecord: 58.0ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 08:25:31 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MlPVZh11hABd402b0MNnUJ1bEkj1qX01FmZ5+5EUFjPaoZIv7YtrHHpJ5n+F6KhTP66AxmrkToagkYbBqcT0kg==", "coin"=>{"description"=>"Bitcoin", "acronym"=>"BTC", "url_image"=>"https://e7.pngegg.com/pngimages/261/204/png-clipart-bitcoin-bitcoin.png", "mining_type_id"=>""}, "commit"=>"Create Coin"}
+Unpermitted parameter: :mining_type_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.4ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:30
+  Rendered coins/_form.html.erb (8.9ms)
+  Rendered coins/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 149ms (Views: 102.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 08:26:13 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.6ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 272ms (Views: 259.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-17 08:26:28 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.4ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 127ms (Views: 118.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/mining_types/new" for ::1 at 2020-09-17 08:26:29 -0300
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (8.7ms)
+  Rendered mining_types/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 173ms (Views: 148.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/mining_types" for ::1 at 2020-09-17 08:26:39 -0300
+Processing by MiningTypesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H5Hki8YvxwuSuCjfPZdcp+kDSjXK608aSPu7z2+EQSLoXZdz8/gsTcU/vvuB42/ldU8OygY83+2d0dqwFR6b0Q==", "mining_type"=>{"description"=>"Proof of Stake", "acronym"=>"PoS"}, "commit"=>"Create Mining type"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[36mMiningType Create (55.4ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of Stake"], ["acronym", "PoS"], ["created_at", "2020-09-17 11:26:39.407984"], ["updated_at", "2020-09-17 11:26:39.407984"]]
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+Redirected to http://localhost:3000/mining_types/1
+Completed 302 Found in 95ms (ActiveRecord: 62.4ms)
+
+
+Started GET "/mining_types/1" for ::1 at 2020-09-17 08:26:39 -0300
+Processing by MiningTypesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mining_types_controller.rb:67
+  Rendering mining_types/show.html.erb within layouts/application
+  Rendered mining_types/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 284ms (Views: 207.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-17 08:26:43 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.6ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 225ms (Views: 213.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mining_types/new" for ::1 at 2020-09-17 08:26:45 -0300
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (6.6ms)
+  Rendered mining_types/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 225ms (Views: 214.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mining_types" for ::1 at 2020-09-17 08:26:55 -0300
+Processing by MiningTypesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"37TyDl492XOj0quNOehRnksY15Ua/w/QUFZWP7LC9zEoeIH2a+oyNfRVPamFnGLc11STatYonyeFfDdAyFgtwg==", "mining_type"=>{"description"=>"Proof of  Capacity", "acronym"=>"PoC"}, "commit"=>"Create Mining type"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[36mMiningType Create (55.2ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of  Capacity"], ["acronym", "PoC"], ["created_at", "2020-09-17 11:26:55.533555"], ["updated_at", "2020-09-17 11:26:55.533555"]]
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+Redirected to http://localhost:3000/mining_types/2
+Completed 302 Found in 85ms (ActiveRecord: 62.1ms)
+
+
+Started GET "/mining_types/2" for ::1 at 2020-09-17 08:26:55 -0300
+Processing by MiningTypesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mMiningType Load (0.6ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/mining_types_controller.rb:67
+  Rendering mining_types/show.html.erb within layouts/application
+  Rendered mining_types/show.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 232ms (Views: 214.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-17 08:26:58 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.7ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 253ms (Views: 241.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mining_types/new" for ::1 at 2020-09-17 08:27:00 -0300
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (6.9ms)
+  Rendered mining_types/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 266ms (Views: 252.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/mining_types" for ::1 at 2020-09-17 08:27:10 -0300
+Processing by MiningTypesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"60FNOlAaBLzKEncLXilMClqFg1bQtN+zJV6b0VTQP5scjT7CZc3v+p2V4S/iXX9IxsnHqRxjT0TwdPquLkrlaA==", "mining_type"=>{"description"=>"Proof of Work", "acronym"=>"PoW"}, "commit"=>"Create Mining type"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[36mMiningType Create (54.1ms)[0m  [1m[32mINSERT INTO "mining_types" ("description", "acronym", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "Proof of Work"], ["acronym", "PoW"], ["created_at", "2020-09-17 11:27:10.439607"], ["updated_at", "2020-09-17 11:27:10.439607"]]
+  ↳ app/controllers/mining_types_controller.rb:30
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/mining_types_controller.rb:30
+Redirected to http://localhost:3000/mining_types/3
+Completed 302 Found in 90ms (ActiveRecord: 60.9ms)
+
+
+Started GET "/mining_types/3" for ::1 at 2020-09-17 08:27:10 -0300
+Processing by MiningTypesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMiningType Load (0.7ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/mining_types_controller.rb:67
+  Rendering mining_types/show.html.erb within layouts/application
+  Rendered mining_types/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 210ms (Views: 191.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/mining_types" for ::1 at 2020-09-17 08:27:13 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.8ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 236ms (Views: 224.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-09-17 08:27:21 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.5ms)
+  Rendered welcome/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 215ms (Views: 203.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 08:27:25 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.7ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 231ms (Views: 219.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 08:27:28 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.9ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:30
+  Rendered coins/_form.html.erb (16.2ms)
+  Rendered coins/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 213ms (Views: 201.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 08:28:10 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WmZ8ftFZhiqubWTCCe5YLUOH2q24XMubak5eU2SdbOmylDs3IadpNonHzyZcxZcu4XJIIycR+CjcuaFpXE2OSA==", "coin"=>{"description"=>"Bitcoin", "acronym"=>"BTC", "url_image"=>"https://img1.gratispng.com/20180330/eje/kisspng-bitcoin-cryptocurrency-monero-initial-coin-offerin-bitcoin-5abdfe6b6c5365.2052061515224008754437.jpg", "mining_type_id"=>"3"}, "commit"=>"Create Coin"}
+Unpermitted parameter: :mining_type_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.9ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:30
+  Rendered coins/_form.html.erb (19.2ms)
+  Rendered coins/new.html.erb within layouts/application (33.3ms)
+Completed 200 OK in 297ms (Views: 274.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 08:28:16 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PnBmqSpExvw3m7Rr2TkCopCkp9kcyl+diqegs0jL14H7JhaksixUGBB5KBwZc2kdp6O/9vVSnSlR/cvBjhwvnQ==", "coin"=>{"description"=>"Bitcoin", "acronym"=>"BTC", "url_image"=>"https://img1.gratispng.com/20180330/eje/kisspng-bitcoin-cryptocurrency-monero-initial-coin-offerin-bitcoin-5abdfe6b6c5365.2052061515224008754437.jpg", "mining_type_id"=>"1"}, "commit"=>"Create Coin"}
+Unpermitted parameter: :mining_type_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.9ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:30
+  Rendered coins/_form.html.erb (27.2ms)
+  Rendered coins/new.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 353ms (Views: 321.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 08:28:58 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 122ms (Views: 115.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 08:29:01 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:30
+  Rendered coins/_form.html.erb (17.4ms)
+  Rendered coins/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 265ms (Views: 251.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 08:29:32 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A0r98NLyesUTfGKtuImkqoMj0XEFzidLud9uc7x7abfruLq5IgyV2TTWyUntomupIdZD/5qDFPgPKJFJhKuLFg==", "coin"=>{"description"=>"Bitcoin", "acronym"=>"BTC", "url_image"=>"https://img1.gratispng.com/20180330/eje/kisspng-bitcoin-cryptocurrency-monero-initial-coin-offerin-bitcoin-5abdfe6b6c5365.2052061515224008754437.jpg", "mining_type_id"=>"1"}, "commit"=>"Create Coin"}
+Unpermitted parameter: :mining_type_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.8ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:30
+  Rendered coins/_form.html.erb (17.9ms)
+  Rendered coins/new.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 268ms (Views: 250.7ms | ActiveRecord: 1.1ms)
+
+
