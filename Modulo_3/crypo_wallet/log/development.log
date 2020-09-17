@@ -2621,3 +2621,339 @@ Unpermitted parameter: :mining_type_id
 Completed 200 OK in 268ms (Views: 250.7ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/coins" for ::1 at 2020-09-17 13:48:53 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 260ms (Views: 241.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 13:48:56 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (50.9ms)
+  Rendered coins/new.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 101ms (Views: 94.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 13:49:01 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d+/v2ZMXtGZ2gyVvpbls7a4xVEsPs1/JBvCd5+Pj1dKfHaiQY+lbelEpjovwkqPuDMTGxZD+bHqwB2Ld2zM3cw==", "coin"=>{"description"=>"", "acronym"=>"", "url_image"=>"", "mining_type_id"=>"1"}, "commit"=>"Create Coin"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mMiningType Load (0.3ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mCoin Create (0.7ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", ""], ["acronym", ""], ["url_image", ""], ["created_at", "2020-09-17 16:49:01.333774"], ["updated_at", "2020-09-17 16:49:01.333774"], ["mining_type_id", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+Redirected to http://localhost:3000/coins/1
+Completed 302 Found in 32ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-17 13:49:01 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 46ms (Views: 41.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 13:49:04 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/coins/1/edit" for ::1 at 2020-09-17 13:49:06 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/edit.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (2.8ms)
+  Rendered coins/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 56ms (Views: 52.1ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/coins/1" for ::1 at 2020-09-17 13:50:07 -0300
+Processing by CoinsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cDwwxHv5ZmpeGMMWxZKFgoMLYO/4vq0LZtXDzRm3MOmM1ZqSl55xp7UCTMpSjaja4+O1HD5Fe4J+CY+oUJHdVw==", "coin"=>{"description"=>"Bitcoin", "acronym"=>"BTC", "url_image"=>"https://img1.gratispng.com/20180330/eje/kisspng-bitcoin-cryptocurrency-monero-initial-coin-offerin-bitcoin-5abdfe6b6c5365.2052061515224008754437.jpg", "mining_type_id"=>"3"}, "commit"=>"Update Coin", "id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[36mMiningType Load (0.1ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[36mCoin Update (0.6ms)[0m  [1m[33mUPDATE "coins" SET "description" = ?, "acronym" = ?, "url_image" = ?, "mining_type_id" = ?, "updated_at" = ? WHERE "coins"."id" = ?[0m  [["description", "Bitcoin"], ["acronym", "BTC"], ["url_image", "https://img1.gratispng.com/20180330/eje/kisspng-bitcoin-cryptocurrency-monero-initial-coin-offerin-bitcoin-5abdfe6b6c5365.2052061515224008754437.jpg"], ["mining_type_id", 3], ["updated_at", "2020-09-17 16:50:07.655220"], ["id", 1]]
+  ↳ app/controllers/coins_controller.rb:44
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:44
+Redirected to http://localhost:3000/coins/1
+Completed 302 Found in 10ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-17 13:50:07 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 13:50:09 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 13:50:12 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (2.7ms)
+  Rendered coins/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 47ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 13:50:55 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1FWy4aMtL7vWhcrJh0Qau3zIPwAo+mJ9t3mNesoSfbo8p/WoU9PAp/EvYS3Sb9W43j2tjre3Uc4BjnJA8sKfGw==", "coin"=>{"description"=>"Ethereum", "acronym"=>"ETH", "url_image"=>"https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/628px-Ethereum_logo_2014.svg.png", "mining_type_id"=>"3"}, "commit"=>"Create Coin"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mCoin Create (0.7ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "Ethereum"], ["acronym", "ETH"], ["url_image", "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/628px-Ethereum_logo_2014.svg.png"], ["created_at", "2020-09-17 16:50:55.571098"], ["updated_at", "2020-09-17 16:50:55.571098"], ["mining_type_id", 3]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (2.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+Redirected to http://localhost:3000/coins/2
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/coins/2" for ::1 at 2020-09-17 13:50:55 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 13:50:58 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 50ms (Views: 47.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 13:51:04 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (2.6ms)
+  Rendered coins/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 46ms (Views: 44.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 13:51:47 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2wd3euH68865AruMQkGF8l35h4lK1T5TWz/exJvb0AIz9TAzEQQc0p6oEGgXakrx/wwVB9WYDeDtyCH+owsyow==", "coin"=>{"description"=>"Dash", "acronym"=>"Dash", "url_image"=>"data:image/png;base64,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", "mining_type_id"=>"1"}, "commit"=>"Create Coin"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mMiningType Load (0.3ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mCoin Create (0.8ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "Dash"], ["acronym", "Dash"], ["url_image", "data:image/png;base64,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"], ["created_at", "2020-09-17 16:51:48.001723"], ["updated_at", "2020-09-17 16:51:48.001723"], ["mining_type_id", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+Redirected to http://localhost:3000/coins/3
+Completed 302 Found in 10ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/coins/3" for ::1 at 2020-09-17 13:51:48 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 42ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 13:51:53 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 13:53:06 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 50ms (Views: 46.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/1/edit" for ::1 at 2020-09-17 13:53:08 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/edit.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (3.0ms)
+  Rendered coins/edit.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-17 13:53:46 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 40ms (Views: 36.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 13:53:48 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 13:53:50 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (2.7ms)
+  Rendered coins/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 13:54:28 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dP13t3T+wBSABstiJS8W3zcuUy5LNSl+1mpobG1XRHKcDzD+hAAvCKesYIZwBNncldvBoNR4Gs1gnZdWVYem0w==", "coin"=>{"description"=>"Iota", "acronym"=>"IOT", "url_image"=>"data:image/png;base64,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", "mining_type_id"=>"1"}, "commit"=>"Create Coin"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mCoin Create (1.0ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "Iota"], ["acronym", "IOT"], ["url_image", "data:image/png;base64,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"], ["created_at", "2020-09-17 16:54:28.346991"], ["updated_at", "2020-09-17 16:54:28.346991"], ["mining_type_id", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+Redirected to http://localhost:3000/coins/4
+Completed 302 Found in 12ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/coins/4" for ::1 at 2020-09-17 13:54:28 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 50ms (Views: 46.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 13:54:31 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins/new" for ::1 at 2020-09-17 13:54:55 -0300
+Processing by CoinsController#new as HTML
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (2.6ms)
+  Rendered coins/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 48ms (Views: 45.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 13:55:18 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UPo9ZF2zmgjX2At81rxz+LkNtFqnu+oaodoHZHmC+ru4CHotrU11FPByoJiDl7z7G/gm1Dj22akXLfheQVIYGg==", "coin"=>{"description"=>"ZCash", "acronym"=>"ZAC", "url_image"=>"data:image/jpeg;base64,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", "mining_type_id"=>""}, "commit"=>"Create Coin"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  Rendering coins/new.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/coins/_form.html.erb:31
+  Rendered coins/_form.html.erb (3.6ms)
+  Rendered coins/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 56ms (Views: 52.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/coins" for ::1 at 2020-09-17 13:55:23 -0300
+Processing by CoinsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kIa+1MylPIMxnvFx7M9UXV9b0uAxHVZmjJYl5QT8eNRV0M7ZVM2uZxZ8bQYshT/iaFzKz9iFlNJXzE6XwiuAyA==", "coin"=>{"description"=>"ZCash", "acronym"=>"ZAC", "url_image"=>"data:image/jpeg;base64,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", "mining_type_id"=>"1"}, "commit"=>"Create Coin"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mMiningType Load (0.1ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[36mCoin Create (0.7ms)[0m  [1m[32mINSERT INTO "coins" ("description", "acronym", "url_image", "created_at", "updated_at", "mining_type_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["description", "ZCash"], ["acronym", "ZAC"], ["url_image", "data:image/jpeg;base64,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"], ["created_at", "2020-09-17 16:55:23.830145"], ["updated_at", "2020-09-17 16:55:23.830145"], ["mining_type_id", 1]]
+  ↳ app/controllers/coins_controller.rb:30
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/coins_controller.rb:30
+Redirected to http://localhost:3000/coins/5
+Completed 302 Found in 9ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/coins/5" for ::1 at 2020-09-17 13:55:23 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-17 13:55:26 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:16
+  Rendered coins/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.2ms)
+
+
