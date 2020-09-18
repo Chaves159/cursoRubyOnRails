@@ -1,7 +1,7 @@
 <h1>Seja Bem-Vindo</h1>
-<strong><p>Idioma utilizado nessa aplicação é: <%=locale() %> </p></strong>
-
-
+<strong><p>Idioma utilizado nessa aplicação é: <%=t('actual_locale') %> </p></strong>
+<p><strong>Data: </strong><%= l(Date.today) %></p>
+<p><%=t('hello') %></p>
 
 
 <%= render "menu" %>

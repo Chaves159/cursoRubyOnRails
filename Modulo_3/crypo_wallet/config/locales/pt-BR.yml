@@ -1,6 +1,32 @@
-pt-BR:
+'pt-BR':
+  actual_locale: "Português do Brasil"
   hello: "Ola Mundo!!"
   links:
     edit: "Editar"
     show: "Mostrar"
     delete: "Apagar"
+  activerecord:
+    models:
+      coin:
+        one: Moeda
+        other: Moedas
+      mining_type:
+        one: Tipo de Mineração
+        other: Tipos de Mineração
+      attibutes:
+        coin:
+          id: Código
+          description: Descrição
+          acronym: Sigla
+          url_image: URL da Imagem
+          mining_type: Tipo de Mineração
+          mining_type_id: ID do Tipo de Mineração
+          update_at: Atualizado em
+          ceated_at: Criado em
+        mining_type:
+          id: Código
+          description: Descrição
+          acronym: Sigla
+          update_at: Atualizado em
+          created_at: Criado em
+
