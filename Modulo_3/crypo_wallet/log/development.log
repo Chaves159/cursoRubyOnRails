@@ -4383,3 +4383,65 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 253ms (Views: 246.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-09-22 13:47:23 -0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.9ms)
+  Rendered welcome/index.html.erb within layouts/application (3478.5ms)
+Completed 200 OK in 7614ms (Views: 7586.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-22 14:11:18 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (1016.9ms)
+Completed 500 Internal Server Error in 1458ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'notify' with type 'application/javascript'
+Checked in these paths: 
+  C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/app/assets/config
+  C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/app/assets/images
+  C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/app/assets/javascripts
+  C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/app/assets/stylesheets
+  C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/lib/assets/images
+  C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actioncable-5.2.4.3/lib/assets/compiled
+  C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activestorage-5.2.4.3/app/assets/javascripts
+  C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-5.2.4.3/lib/assets/compiled
+  C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/node_modules):
+     5:     <%= csrf_meta_tags %>
+     6:     <%= csp_meta_tag %>
+     7: 
+     8:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     9:     <%= stylesheet_link_tag    'scaffolds', media: 'all', 'data-turbolinks-track': 'reload' %>
+    10:     <%= stylesheet_link_tag    params[:controller], media: 'all', 'data-turbolinks-track': 'reload' %>
+    11: 
+  
+app/assets/javascripts/application.js.erb:17
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__340653584_96115480'
+Started GET "/" for 127.0.0.1 at 2020-09-22 14:12:05 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.3ms)
+  Rendered welcome/index.html.erb within layouts/application (941.8ms)
+Completed 200 OK in 3418ms (Views: 3412.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-22 14:12:49 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.6ms)
+  Rendered welcome/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 68ms (Views: 65.5ms | ActiveRecord: 0.0ms)
+
+
