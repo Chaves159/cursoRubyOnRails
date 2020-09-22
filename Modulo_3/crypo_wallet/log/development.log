@@ -4670,3 +4670,175 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 72ms (Views: 66.3ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 14:59:58 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.4ms)
+  Rendered welcome/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 74ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 15:00:08 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:18
+  Rendered coins/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 68ms (Views: 65.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 15:00:08 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:18
+  Rendered coins/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 57ms (Views: 54.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 15:00:12 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.3ms)
+  Rendered welcome/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 15:00:12 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.3ms)
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 58ms (Views: 55.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 15:00:14 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.3ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 60ms (Views: 57.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 15:00:14 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2020-09-22 15:31:03 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.7ms)
+  Rendered welcome/index.html.erb within layouts/application (4550.6ms)
+Completed 200 OK in 4812ms (Views: 4801.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 15:31:15 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.3ms)
+  Rendered welcome/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 312ms (Views: 301.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 15:31:18 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.7ms)
+  Rendered welcome/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 347ms (Views: 302.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 15:31:29 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.1ms)
+  Rendered welcome/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 273ms (Views: 261.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 15:32:31 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (0.9ms)
+  Rendered welcome/index.html.erb within layouts/application (3109.6ms)
+Completed 200 OK in 3289ms (Views: 3274.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 15:34:52 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (103.4ms)
+  Rendered welcome/index.html.erb within layouts/application (4473.8ms)
+Completed 200 OK in 4750ms (Views: 4736.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 15:35:27 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.6ms)
+  Rendered welcome/index.html.erb within layouts/application (347.5ms)
+Completed 200 OK in 630ms (Views: 624.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 15:36:52 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.1ms)
+  Rendered welcome/index.html.erb within layouts/application (4773.7ms)
+Completed 200 OK in 4960ms (Views: 4948.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 15:37:02 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.1ms)
+  Rendered welcome/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 308ms (Views: 294.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 15:38:47 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (209.4ms)
+  Rendered welcome/index.html.erb within layouts/application (225.7ms)
+Completed 500 Internal Server Error in 276ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/app/views/welcome/_menu.html.erb:4: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+C:/Users/joaov/Projeto/Modulo_3/crypo_wallet/app/views/welcome/_menu.html.erb:6: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/welcome/_menu.html.erb:4: syntax error, unexpected ensure, expecting ')'
+app/views/welcome/_menu.html.erb:6: syntax error, unexpected end, expecting ')'
+app/views/welcome/index.html.erb:6:in `_app_views_welcome_index_html_erb__600470663_120498960'
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 15:39:22 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.2ms)
+  Rendered welcome/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 340ms (Views: 325.9ms | ActiveRecord: 0.0ms)
+
+
