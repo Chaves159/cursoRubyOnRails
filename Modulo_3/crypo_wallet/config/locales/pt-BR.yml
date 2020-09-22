@@ -2,6 +2,7 @@
   current_locale: "Português do Brasil"
   welcome: "Seja Bem-Vindo!"
   messages:
+    confirme: "Tem Certeza?"
     welcome: "Este é o Crypto Wallet!"
     menu: "Para começar selecione uma das opções abaixo."
   hello: "Ola Mundo!!"
@@ -9,6 +10,7 @@
     edit: "Editar"
     show: "Mostrar"
     delete: "Apagar"
+    new: "Novo"
   activerecord:
     models:
       coin:
