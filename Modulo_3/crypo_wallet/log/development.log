@@ -4878,3 +4878,331 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 691ms (Views: 679.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:04:33 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.1ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (4494.1ms)
+Completed 200 OK in 5123ms (Views: 4751.2ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:04:39 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.6ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 214ms (Views: 207.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:05:51 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.6ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 347ms (Views: 337.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:10:01 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.6ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (4351.7ms)
+Completed 200 OK in 4946ms (Views: 4907.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 16:10:12 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (19.1ms)
+  Rendered welcome/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 314ms (Views: 301.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 16:10:12 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.8ms)
+  Rendered welcome/index.html.erb within layouts/application (114.3ms)
+Completed 200 OK in 414ms (Views: 402.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:10:19 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 285ms (Views: 270.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:10:20 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.7ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (53.2ms)
+Completed 200 OK in 267ms (Views: 251.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 16:10:43 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.8ms)
+  Rendered welcome/index.html.erb within layouts/application (333.4ms)
+Completed 200 OK in 575ms (Views: 563.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 16:10:44 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (1.7ms)
+  Rendered welcome/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 217ms (Views: 209.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:10:49 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 362ms (Views: 348.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:10:50 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.8ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 316ms (Views: 305.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:11:26 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.7ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 321ms (Views: 307.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 16:11:35 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.7ms)
+  Rendered welcome/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 325ms (Views: 311.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=en" for 127.0.0.1 at 2020-09-22 16:11:36 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"en"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.2ms)
+  Rendered welcome/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 721ms (Views: 709.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 16:11:42 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (105.4ms)
+Completed 200 OK in 854ms (Views: 836.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 16:11:43 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 356ms (Views: 340.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 16:13:05 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (4494.4ms)
+Completed 200 OK in 4741ms (Views: 4718.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 16:13:24 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (5.8ms)
+  Rendered welcome/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 138ms (Views: 134.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 16:13:24 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (409.9ms)
+  Rendered welcome/index.html.erb within layouts/application (416.4ms)
+Completed 200 OK in 711ms (Views: 706.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:13:28 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (1.0ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (101.8ms)
+Completed 200 OK in 425ms (Views: 406.3ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:13:29 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[36mMiningType Load (0.8ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 329ms (Views: 317.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 16:15:22 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (3.5ms)
+  Rendered welcome/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 358ms (Views: 345.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 16:15:23 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (3.2ms)
+  Rendered welcome/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 333ms (Views: 323.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 16:15:26 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (1.1ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 304ms (Views: 292.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 16:15:27 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 325ms (Views: 317.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 16:16:52 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:2
+  [1m[36mCoin Load (0.8ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (38.3ms)
+Completed 200 OK in 317ms (Views: 298.1ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/coins" for 127.0.0.1 at 2020-09-22 16:20:14 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:2
+  [1m[36mCoin Load (2.0ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 367ms (Views: 353.4ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 16:20:22 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.2ms)
+  Rendered welcome/index.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 277ms (Views: 265.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 16:20:23 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.3ms)
+  Rendered welcome/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 308ms (Views: 297.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:20:28 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:3
+  [1m[36mMiningType Load (0.4ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 147ms (Views: 140.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:20:29 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:3
+  [1m[36mMiningType Load (0.3ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 645ms (Views: 638.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:25:06 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:3
+  [1m[36mMiningType Load (0.9ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 244ms (Views: 231.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/mining_types/1" for 127.0.0.1 at 2020-09-22 16:25:13 -0300
+Processing by MiningTypesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMiningType Load (1.8ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/mining_types_controller.rb:67
+  Rendering mining_types/show.html.erb within layouts/application
+  Rendered mining_types/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 756ms (Views: 295.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 16:37:39 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:3
+  [1m[36mMiningType Load (0.5ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 151ms (Views: 144.1ms | ActiveRecord: 1.0ms)
+
+
