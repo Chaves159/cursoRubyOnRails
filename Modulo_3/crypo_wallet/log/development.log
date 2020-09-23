@@ -5362,3 +5362,362 @@ Processing by CoinsController#edit as HTML
 Completed 200 OK in 359ms (Views: 311.0ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/coins/1/edit" for 127.0.0.1 at 2020-09-22 17:19:14 -0300
+Processing by CoinsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (1.3ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "mining_types"."description", "mining_types"."id" FROM "mining_types"[0m
+  ↳ app/controllers/coins_controller.rb:67
+  Rendering coins/edit.html.erb within layouts/application
+  Rendered coins/_form.html.erb (9.6ms)
+  Rendered coins/edit.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 398ms (Views: 345.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 17:19:18 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (3.3ms)
+  Rendered welcome/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 282ms (Views: 271.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/?locale=pt-BR" for 127.0.0.1 at 2020-09-22 17:19:19 -0300
+Processing by WelcomeController#index as HTML
+  Parameters: {"locale"=>"pt-BR"}
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (2.3ms)
+  Rendered welcome/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 349ms (Views: 339.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 17:19:27 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:3
+  [1m[36mMiningType Load (1.2ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 274ms (Views: 260.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/mining_types" for 127.0.0.1 at 2020-09-22 17:19:28 -0300
+Processing by MiningTypesController#index as HTML
+  Rendering mining_types/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:3
+  [1m[36mMiningType Load (0.7ms)[0m  [1m[34mSELECT "mining_types".* FROM "mining_types"[0m
+  ↳ app/views/mining_types/index.html.erb:15
+  Rendered mining_types/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 312ms (Views: 298.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/mining_types/new" for 127.0.0.1 at 2020-09-22 17:19:35 -0300
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (6.5ms)
+  Rendered mining_types/new.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 260ms (Views: 247.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/mining_types/new" for 127.0.0.1 at 2020-09-22 17:24:22 -0300
+Processing by MiningTypesController#new as HTML
+  Rendering mining_types/new.html.erb within layouts/application
+  Rendered mining_types/_form.html.erb (9.2ms)
+  Rendered mining_types/new.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 361ms (Views: 348.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2020-09-23 14:04:09 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (22.8ms)
+  Rendered welcome/index.html.erb within layouts/application (987.6ms)
+Completed 200 OK in 1407ms (Views: 1401.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-23 14:04:13 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:2
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 84ms (Views: 79.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-23 14:04:13 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:2
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 66ms (Views: 63.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-23 14:04:16 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (19.1ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `mining_type_description' for #<Coin:0x000000000c482860>
+Did you mean?  mining_type_id):
+    17:     <%= text_field_tag nil, @coin.url_image,class:"form-control" %>
+    18:   </div>
+    19:   <div class="form-group">
+    20:     <%= label_tag nil, @coin.mining_type_description %>
+    21:     <%= text_field_tag nil, @coin.mining_type_description,class:"form-control"%>
+    22:   </div>
+    23: </form>
+  
+app/views/coins/show.html.erb:20:in `_app_views_coins_show_html_erb__284653094_103025340'
+Started GET "/coins/1" for ::1 at 2020-09-23 14:06:49 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `mining_type_description' for #<Coin:0x000000000ef7b288>
+Did you mean?  mining_type_id):
+    18:   </div>
+    19:   <div class="form-group">
+    20:     <%= label_tag nil, @coin.class.human_attribute_name(:mining_type_description) %>
+    21:     <%= text_field_tag nil, @coin.mining_type_description,class:"form-control"%>
+    22:   </div>
+    23: </form>
+    24: 
+  
+app/views/coins/show.html.erb:21:in `_app_views_coins_show_html_erb__284653094_125554640'
+Started GET "/coins/1" for ::1 at 2020-09-23 14:07:12 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `mining_type_description' for #<Coin:0x0000000006d590e8>
+Did you mean?  mining_type_id):
+    18:   </div>
+    19:   <div class="form-group">
+    20:     <%= label_tag nil, @coin.class.human_attribute_name(:mining_type_description) %>
+    21:     <%= text_field_tag nil, @coin.mining_type_description,class:"form-control"%>
+    22:   </div>
+    23: </form>
+    24: 
+  
+app/views/coins/show.html.erb:21:in `_app_views_coins_show_html_erb__284653094_110681780'
+Started GET "/coins/1" for ::1 at 2020-09-23 14:07:35 -0300
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (950.3ms)
+Completed 500 Internal Server Error in 991ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `mining_type_description' for #<Coin:0x000000000b8f04e8>
+Did you mean?  mining_type_id):
+    18:   </div>
+    19:   <div class="form-group">
+    20:     <%= label_tag nil, @coin.class.human_attribute_name(:mining_type_description) %>
+    21:     <%= text_field_tag nil, @coin.mining_type_description,class:"form-control"%>
+    22:   </div>
+    23: </form>
+    24: 
+  
+app/views/coins/show.html.erb:21:in `_app_views_coins_show_html_erb__582274275_96979240'
+Started GET "/" for ::1 at 2020-09-23 14:07:42 -0300
+Processing by WelcomeController#index as HTML
+  Rendering welcome/index.html.erb within layouts/application
+  Rendered welcome/_menu.html.erb (10.8ms)
+  Rendered welcome/index.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 371ms (Views: 369.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-23 14:07:44 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:2
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 78ms (Views: 74.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-23 14:07:44 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:2
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-23 14:07:46 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `mining_type_description' for #<Coin:0x000000000e6d2820>
+Did you mean?  mining_type_id):
+    18:   </div>
+    19:   <div class="form-group">
+    20:     <%= label_tag nil, @coin.class.human_attribute_name(:mining_type_description) %>
+    21:     <%= text_field_tag nil, @coin.mining_type_description,class:"form-control"%>
+    22:   </div>
+    23: </form>
+    24: 
+  
+app/views/coins/show.html.erb:21:in `_app_views_coins_show_html_erb__582274275_121014920'
+Started GET "/coins/1" for ::1 at 2020-09-23 14:08:14 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  Rendered coins/show.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `mining_type_description' for #<Coin:0x000000000f01a478>
+Did you mean?  mining_type_id):
+    18:   </div>
+    19:   <div class="form-group">
+    20:     <%= label_tag nil, @coin.class.human_attribute_name(:mining_type) %>
+    21:     <%= text_field_tag nil, @coin.mining_type_description,class:"form-control"%>
+    22:   </div>
+    23: </form>
+    24: 
+  
+app/views/coins/show.html.erb:21:in `_app_views_coins_show_html_erb__582274275_125880540'
+Started GET "/coins/1" for ::1 at 2020-09-23 14:08:32 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/coins/show.html.erb:21
+  Rendered coins/show.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 98ms (Views: 92.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-23 14:09:38 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:2
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 69ms (Views: 66.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-23 14:09:39 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/coins/show.html.erb:21
+  Rendered coins/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 60ms (Views: 55.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-23 14:10:28 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/coins/show.html.erb:21
+  Rendered coins/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 64ms (Views: 60.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-23 14:10:45 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  [1m[36mMiningType Load (0.2ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/coins/show.html.erb:21
+  Rendered coins/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-23 14:10:50 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  [1m[36mMiningType Load (0.3ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/coins/show.html.erb:21
+  Rendered coins/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/coins" for ::1 at 2020-09-23 14:10:53 -0300
+Processing by CoinsController#index as HTML
+  Rendering coins/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:2
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/views/coins/index.html.erb:14
+  Rendered coins/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/coins/1" for ::1 at 2020-09-23 14:10:55 -0300
+Processing by CoinsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT  "coins".* FROM "coins" WHERE "coins"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:71
+  Rendering coins/show.html.erb within layouts/application
+  [1m[36mMiningType Load (0.3ms)[0m  [1m[34mSELECT  "mining_types".* FROM "mining_types" WHERE "mining_types"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/coins/show.html.erb:21
+  Rendered coins/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 63ms (Views: 58.6ms | ActiveRecord: 0.5ms)
+
+
